@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap");
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Nunito", ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-display: "Outfit", "Nunito", ui-rounded, system-ui, sans-serif;
+
+  --color-brand-50: #eef9f4;
+  --color-brand-100: #d9f2e7;
+  --color-brand-200: #b5e5d1;
+  --color-brand-300: #84d1b2;
+  --color-brand-400: #4db58d;
+  --color-brand-500: #319a70;
+  --color-brand-600: #267a57;
+  --color-brand-700: #216247;
+  --color-brand-800: #1e4f3b;
+  --color-brand-900: #193f31;
+  --color-brand-950: #0d241c;
+
+  --color-warm-50: #fff8ed;
+  --color-warm-500: #f97316;
+  --color-danger-50: #fff1f2;
+  --color-danger-600: #dc2626;
+
+  --shadow-soft: 0 18px 50px -24px rgb(15 23 42 / 0.22);
+  --shadow-card: 0 12px 32px -24px rgb(15 23 42 / 0.32);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background:
+      radial-gradient(circle at 10% -8%, rgb(217 242 231 / 0.85), transparent 30rem),
+      #fafaf9;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: #b5e5d1;
+    color: #0d241c;
+  }
+
+  :focus-visible {
+    outline: 3px solid #84d1b2;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Leaflet is an external UI library; its structural styles stay global. */
+.leaflet-container {
+  z-index: 0;
+  font-family: "Nunito", ui-rounded, system-ui, sans-serif;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  border: 1px solid #d9f2e7;
+  box-shadow: 0 16px 40px -20px rgb(15 23 42 / 0.45);
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  line-height: 1.35;
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Empowering residents of Mutirão Jardim São Bento, this app facilitates urban problem reporting, safety alerts, and access to essential public services.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
